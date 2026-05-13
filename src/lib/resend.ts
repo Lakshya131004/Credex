@@ -1,7 +1,7 @@
 import { Resend } from "resend";
 import type { AuditResult } from "@/types";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend(process.env.RESEND_API_KEY ?? "placeholder-resend-key");
 const FROM_EMAIL = "SpendLens <audit@spendlens.io>";
 const CREDEX_TEAM_EMAIL = process.env.CREDEX_NOTIFY_EMAIL ?? "team@credex.rocks";
 
